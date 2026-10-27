@@ -42,13 +42,21 @@
     <UnityVersion>6000.3.2f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/u24133/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.3.1/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/u23149/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.3.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.2f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.2f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.2f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/Water.cs" />
+    <Compile Include="Assets/Scripts/Damager.cs" />
+    <Compile Include="Assets/Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Igloo.cs" />
+    <Compile Include="Assets/Scripts/Patrol.cs" />
+    <Compile Include="Assets/Scripts/Fish.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/CameraFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
