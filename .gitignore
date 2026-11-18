@@ -1,0 +1,37 @@
+# Pastas geradas pelo Unity (pesadas e recriadas automaticamente)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# Relatórios de crash
+mono_crash.*
+
+# Arquivos de IDE (VS Code, Visual Studio, Rider)
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Lixo do macOS
+.DS_Store
+__MACOSX/
+
+# Builds e pacotes exportados
+*.apk
+*.aab
+*.app
+*.unitypackage
