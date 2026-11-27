@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // P-gelados - Jackeline e Matheus
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,10 +7,18 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 // Controla peixes (pontuacao), vidas, dano, vitoria e derrota.
+=======
+using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+<<<<<<< HEAD
     [Header("Regras")]
     public int fishNeeded = 10;
     public int lives = 3;
@@ -119,10 +128,31 @@ public class GameManager : MonoBehaviour
 
         UpdateHUD();
         ShowMessage("Colete " + fishNeeded + " peixes e chegue ao iglu!", 5f);
+=======
+    public int fishNeeded = 10;
+    public int lives = 3;
+    public float invulnTime = 1.5f;
+    public TMP_Text scoreText, livesText, messageText;
+    public Transform player;
+
+    int fish;
+    float lastHit = -99f;
+    Vector3 startPos;
+    public bool GameEnded { get; private set; }
+
+    void Awake() { Instance = this; }
+
+    void Start()
+    {
+        startPos = player.position;
+        messageText.text = "";
+        UpdateHUD();
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     }
 
     void Update()
     {
+<<<<<<< HEAD
         Keyboard k = Keyboard.current;
         if (k != null)
         {
@@ -147,10 +177,17 @@ public class GameManager : MonoBehaviour
     }
 
     // ---------------- Coleta ----------------
+=======
+        if (GameEnded && Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     public void AddFish()
     {
         if (GameEnded) return;
         fish++;
+<<<<<<< HEAD
         Play(collectSound);
         UpdateHUD();
         if (fish == fishNeeded) ShowMessage("Peixes suficientes! Corra para o iglu!", 5f);
@@ -195,10 +232,32 @@ public class GameManager : MonoBehaviour
         if (currentLives <= 0) { Lose(); return; }
         Respawn();
         ShowMessage("Voce caiu! Tente de novo.", 2f);
+=======
+        UpdateHUD();
+    }
+
+    public void TakeDamage()
+    {
+        if (GameEnded || Time.time - lastHit < invulnTime) return;
+        lastHit = Time.time;
+        lives--;
+        UpdateHUD();
+        if (lives <= 0) Lose();
+    }
+
+    public void FellInWater()
+    {
+        if (GameEnded) return;
+        lives--;
+        UpdateHUD();
+        if (lives <= 0) { Lose(); return; }
+        Respawn();
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     }
 
     void Respawn()
     {
+<<<<<<< HEAD
         if (player == null) return;
         Vector3 pos = respawnPoint != null ? respawnPoint.position : startPos;
         Quaternion rot = respawnPoint != null ? respawnPoint.rotation : startRot;
@@ -224,11 +283,32 @@ public class GameManager : MonoBehaviour
         if (playerCtrl != null) playerCtrl.PlayVictory();
         if (musicSource != null) musicSource.volume = musicVolume * 0.4f;
         ShowEnd("VITORIA!", "A familia esta alimentada!");
+=======
+        var rb = player.GetComponent<Rigidbody>();
+        rb.linearVelocity = Vector3.zero;
+        player.position = startPos;
+        lastHit = Time.time;
+    }
+
+    public void ReachIgloo()
+    {
+        if (GameEnded) return;
+        if (fish >= fishNeeded)
+        {
+            GameEnded = true;
+            messageText.text = "VITORIA! A familia esta alimentada!\nAperte R para jogar de novo";
+        }
+        else
+        {
+            messageText.text = "Faltam " + (fishNeeded - fish) + " peixes!";
+        }
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     }
 
     void Lose()
     {
         GameEnded = true;
+<<<<<<< HEAD
         Won = false;
         endTimeSeconds = Time.time - startTime;
         Play(loseSound);
@@ -285,10 +365,14 @@ public class GameManager : MonoBehaviour
         currentMessage = "";
         if (messageText != null) messageText.text = "";
         if (messagePanel != null) messagePanel.SetActive(false);
+=======
+        messageText.text = "DERROTA! Acabaram as vidas.\nAperte R para tentar de novo";
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     }
 
     void UpdateHUD()
     {
+<<<<<<< HEAD
         if (scoreText != null) scoreText.text = "Peixes: " + fish + " / " + fishNeeded;
         if (livesText != null) livesText.text = "Vidas: " + currentLives;
 
@@ -325,3 +409,9 @@ public class GameManager : MonoBehaviour
     public void PlayJump() { Play(jumpSound); }
     public void PlaySplash() { Play(splashSound); }
 }
+=======
+        scoreText.text = "Peixes: " + fish + " / " + fishNeeded;
+        livesText.text = "Vidas: " + lives;
+    }
+}
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d

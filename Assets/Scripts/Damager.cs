@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // P-gelados - Jackeline e Matheus
 using UnityEngine;
 
@@ -20,3 +21,14 @@ public class Damager : MonoBehaviour
         if (GameManager.Instance != null) GameManager.Instance.TakeDamage(transform.position);
     }
 }
+=======
+using UnityEngine;
+
+public class Damager : MonoBehaviour
+{
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player")) GameManager.Instance.TakeDamage();
+    }
+}
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d

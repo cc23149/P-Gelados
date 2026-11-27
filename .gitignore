@@ -34,4 +34,8 @@ __MACOSX/
 *.apk
 *.aab
 *.app
+<<<<<<< HEAD
 *.unitypackage
+=======
+*.unitypackage
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d

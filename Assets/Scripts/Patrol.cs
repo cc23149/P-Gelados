@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // P-gelados - Jackeline e Matheus
 using UnityEngine;
 
@@ -6,10 +7,17 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     [Header("Patrulha")]
+=======
+using UnityEngine;
+
+public class Patrol : MonoBehaviour
+{
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     public Vector3 direction = Vector3.right;
     public float distance = 5f;
     public float speed = 2f;
 
+<<<<<<< HEAD
     [Header("Perseguir o jogador (so quando ele esta nadando)")]
     public bool chasePlayer = true;
     public float chaseRange = 7f;
@@ -81,3 +89,18 @@ public class Patrol : MonoBehaviour
         }
     }
 }
+=======
+    Vector3 start;
+
+    void Start() { start = transform.position; direction.Normalize(); }
+
+    void Update()
+    {
+        float t = Mathf.PingPong(Time.time * speed, distance);
+        Vector3 newPos = start + direction * t;
+        Vector3 move = newPos - transform.position;
+        if (move.sqrMagnitude > 0.0001f) transform.rotation = Quaternion.LookRotation(move);
+        transform.position = newPos;
+    }
+}
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d

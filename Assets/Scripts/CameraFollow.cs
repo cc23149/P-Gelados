@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 // P-gelados - Jackeline e Matheus
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Camera que segue o pinguim (Q/E giram) e ganha neblina azul quando fica debaixo d'agua.
+=======
+using UnityEngine;
+
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset = new Vector3(0, 5, -8);
     public float smooth = 5f;
+<<<<<<< HEAD
     public float rotateSpeed = 90f;
 
     [Header("Efeito debaixo d'agua")]
@@ -45,10 +51,13 @@ public class CameraFollow : MonoBehaviour
 
         if (target != null) transform.position = target.position + offset;
     }
+=======
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
 
     void LateUpdate()
     {
         if (target == null) return;
+<<<<<<< HEAD
 
         Keyboard k = Keyboard.current;
         if (k != null)
@@ -97,3 +106,9 @@ public class CameraFollow : MonoBehaviour
         }
     }
 }
+=======
+        transform.position = Vector3.Lerp(transform.position, target.position + offset, smooth * Time.deltaTime);
+        transform.LookAt(target.position + Vector3.up);
+    }
+}
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d

@@ -353,8 +353,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 43
     width: 1920
+=======
+    y: 0
+    width: 1256
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     height: 36
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -722,9 +727,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 79
     width: 444
     height: 405
+=======
+    y: 24
+    width: 301
+    height: 304
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -794,9 +805,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 510
     width: 444
     height: 476
+=======
+    y: 354
+    width: 301
+    height: 349
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -872,9 +889,13 @@ MonoBehaviour:
     m_SelectedIDs: []
     m_LastClickedID:
       m_Data: 0
+<<<<<<< HEAD
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 62076
+=======
+    m_ExpandedIDs: []
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -955,10 +976,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 445
     y: 79
     width: 912
     height: 597
+=======
+    x: 1
+    y: 24
+    width: 631
+    height: 444
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1593,11 +1621,19 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.13337311, y: 0.85330296, z: -0.26565143, w: 0.42841676}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: 0.13337138, y: 0.85329187, z: -0.26564798, w: 0.4284112}
   m_Size:
     m_Target: 1.5085891
     speed: 2
     m_Value: 1.5085891
+=======
+    m_Value: {x: 0.14851685, y: 0.47028312, z: -0.08063511, w: 0.8661861}
+  m_Size:
+    m_Target: 21.993156
+    speed: 2
+    m_Value: 21.993156
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1707,10 +1743,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Animation\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 445
     y: 702
     width: 912
     height: 284
+=======
+    x: 1
+    y: 494
+    width: 631
+    height: 209
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1748,10 +1791,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1359
     y: 79
     width: 560
     height: 907
+=======
+    x: 634
+    y: 24
+    width: 320
+    height: 679
+>>>>>>> 7fbd2e63d41476789740341ce6fb4952d1cad78d
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
